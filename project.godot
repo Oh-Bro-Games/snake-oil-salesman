@@ -30,6 +30,10 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/ninetailsrabbit.indie_blueprint_rpg/plugin.cfg")
 
+[gui]
+
+theme/custom_font="uid://bs8tn5647fyku"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
