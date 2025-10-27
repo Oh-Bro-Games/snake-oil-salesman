@@ -1,3 +1,121 @@
-[gd_scene format=3 uid="uid://dfwksmjv817mf"]
+[gd_scene load_steps=2 format=3 uid="uid://dfwksmjv817mf"]
+
+[ext_resource type="Script" uid="uid://cg25ggkd84s8j" path="res://src/fight_ui.gd" id="1_atyid"]
 
 [node name="Fight" type="Node2D"]
+
+[node name="FightUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_atyid")
+
+[node name="UIContainer" type="MarginContainer" parent="FightUI"]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 6
+size_flags_vertical = 10
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="BaseUI" type="HBoxContainer" parent="FightUI/UIContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LeftColumn" type="VBoxContainer" parent="FightUI/UIContainer/BaseUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AttackButton" type="Button" parent="FightUI/UIContainer/BaseUI/LeftColumn"]
+layout_mode = 2
+text = "Attack"
+
+[node name="DefendButton" type="Button" parent="FightUI/UIContainer/BaseUI/LeftColumn"]
+layout_mode = 2
+text = "Defend"
+
+[node name="RightColumn" type="VBoxContainer" parent="FightUI/UIContainer/BaseUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SkipButton" type="Button" parent="FightUI/UIContainer/BaseUI/RightColumn"]
+layout_mode = 2
+text = "Skip"
+
+[node name="RunButton" type="Button" parent="FightUI/UIContainer/BaseUI/RightColumn"]
+layout_mode = 2
+text = "Run"
+
+[node name="AttackUI" type="HBoxContainer" parent="FightUI/UIContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LeftColumn" type="VBoxContainer" parent="FightUI/UIContainer/AttackUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FinalSellButton" type="Button" parent="FightUI/UIContainer/AttackUI/LeftColumn"]
+layout_mode = 2
+text = "Final Sell"
+
+[node name="EmotionalPlayButton" type="Button" parent="FightUI/UIContainer/AttackUI/LeftColumn"]
+layout_mode = 2
+text = "Emotional Play"
+
+[node name="RightColumn" type="VBoxContainer" parent="FightUI/UIContainer/AttackUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConveyUrgencyButton" type="Button" parent="FightUI/UIContainer/AttackUI/RightColumn"]
+layout_mode = 2
+text = "Convey Urgency"
+
+[node name="AskAboutThemselvesButton" type="Button" parent="FightUI/UIContainer/AttackUI/RightColumn"]
+layout_mode = 2
+text = "Ask About Themselves"
+
+[node name="DefendUI" type="HBoxContainer" parent="FightUI/UIContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LeftColumn" type="VBoxContainer" parent="FightUI/UIContainer/DefendUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AssureGoodIntentButton" type="Button" parent="FightUI/UIContainer/DefendUI/LeftColumn"]
+layout_mode = 2
+text = "Assure Good Intent"
+
+[node name="ComplimentThemButton" type="Button" parent="FightUI/UIContainer/DefendUI/LeftColumn"]
+layout_mode = 2
+text = "Compliment Them"
+
+[node name="RightColumn" type="VBoxContainer" parent="FightUI/UIContainer/DefendUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LowerPriceButton" type="Button" parent="FightUI/UIContainer/DefendUI/RightColumn"]
+layout_mode = 2
+text = "\"Lower Price\""
+
+[node name="FeignSolidarityButton" type="Button" parent="FightUI/UIContainer/DefendUI/RightColumn"]
+layout_mode = 2
+text = "Feign Solidarity"

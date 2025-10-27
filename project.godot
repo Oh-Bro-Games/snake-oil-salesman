@@ -32,6 +32,7 @@ enabled=PackedStringArray("res://addons/ninetailsrabbit.indie_blueprint_rpg/plug
 
 [gui]
 
+theme/custom="uid://dylu6j75kwx8p"
 theme/custom_font="uid://bs8tn5647fyku"
 
 [rendering]
